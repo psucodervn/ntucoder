@@ -72,7 +72,6 @@ export default function problems (state = initialState, action) {
       }
     }
     case FETCHED_DONE: {
-      console.log(action)
       return {
         ...state,
         data: action.data,

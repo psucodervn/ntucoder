@@ -16,13 +16,16 @@ class Main extends Component {
           <TextField
             defaultValue='admin'
             onChange={(e) => changeUsername(e.target.value, 0)}
+            disabled={status === 1}
             floatingLabelText='Tài khoản của bạn' />
           <TextField
             defaultValue='trevorjoker'
             onChange={(e) => changeUsername(e.target.value, 1)}
+            disabled={status === 1}
             floatingLabelText='Tài khoản của hắn' />
           <RaisedButton
             primary label='So sánh'
+            disabled={status === 1}
             onClick={submit} />
         </div>
         <CompareTable data={data} status={status} />

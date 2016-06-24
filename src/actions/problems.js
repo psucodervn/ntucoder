@@ -18,8 +18,8 @@ function loadProblems (userID) {
       username,
       userID
     })
-    fetch(`//acm.hungle.xyz/solved.php?username=${username}`)
-    // fetch(`http://localhost:8080/public/${username}.json`)
+    // fetch(`//acm.hungle.xyz/solved.php?username=${username}`)
+    fetch(`/solved?username=${username}`)
       .then(response => response.json())
       .then(json => {
         dispatch({
